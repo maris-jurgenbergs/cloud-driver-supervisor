@@ -1,0 +1,37 @@
+<div class="example-loading-shade" *ngIf="isLoadingResults">
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+  </div>
+  <h1 mat-dialog-title>Transportation details</h1>
+  <div mat-dialog-content>
+    <!-- <div class="col-md-5"> -->
+        <div class="row">
+            <label class="col-md-5">Full name:</label>
+            <span class="col-md-7">{{viewResult.fullName}}</span>
+        </div>
+        <div class="row">
+            <label class="col-md-5">Phone:</label>
+            <span class="col-md-7">{{viewResult.phone}}</span>
+        </div>
+        <div class="row">
+            <label class="col-md-5">Driving time left before rest needed:</label>
+            <span class="col-md-7">{{viewResult.drivingTime}}</span>
+        </div>
+        <div class="row">
+            <label class="col-md-5">Alerts:</label>
+            <div class="col-md-7">
+                <div *ngFor="let alert of viewResult.alerts">
+                  <p class="alert-link" (click)="openAlertDetailsDialog(alert.alertId)">{{AlertType[alert.type]}} {{formatUnixTime(alert.createdAt)}}</p>
+                </div>
+              </div>
+        </div>
+        <div class="row">
+          <label class="col-md-5">Violations:</label>
+          <div class="col-md-7">
+            <div *ngFor="let violation of viewResult.violations">
+              <p>{{ViolationType[violation.type]}} {{formatUnixTime(violation.createdAt)}}</p>
+            </div>
+          </div>
+        </div>
+  </div>
+  <div mat-dialog-actions>
+  </div>

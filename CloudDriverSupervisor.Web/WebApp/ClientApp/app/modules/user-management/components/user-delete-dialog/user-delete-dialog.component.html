@@ -1,0 +1,14 @@
+<div class="example-loading-shade" *ngIf="isLoadingResults">
+  <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+</div>
+<h1 mat-dialog-title>Delete confirmation</h1>
+<div mat-dialog-content>
+  <h4>Are you sure you want to delete?</h4>
+  <p>Name: <b>{{data.name}}</b></p>
+  <p>Surname: <b>{{data.surname}}</b></p>
+  <p>Email: <b>{{data.email}}</b></p>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="accent" (click)="onDeleteClick()" tabindex="2">Delete user</button>
+  <button mat-raised-button (click)="onCancelClick()" tabindex="-1">Cancel</button>
+</div>

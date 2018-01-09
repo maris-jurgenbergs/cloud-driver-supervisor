@@ -1,0 +1,17 @@
+<div class="example-loading-shade" *ngIf="isLoadingResults">
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+  </div>
+  <h1 mat-dialog-title>Alert evaluation</h1>
+  <div mat-dialog-content>
+      <mat-select [(value)]="selected">
+          <mat-option value="1">Trivial</mat-option>
+          <mat-option value="2">Low</mat-option>
+          <mat-option value="3">Average</mat-option>
+          <mat-option value="4">High</mat-option>
+          <mat-option value="5">Critical</mat-option>
+        </mat-select>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="onEvaluateClick()" tabindex="2">Evaluate</button>
+    <button mat-raised-button (click)="onCancelClick()" tabindex="-1">Cancel</button>
+  </div>

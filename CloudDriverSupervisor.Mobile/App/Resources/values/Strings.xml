@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Mobile.App</string>
+  <string name="login_button_text">Sign in</string>
+  <string name="driver_tracking_button_text">Driver tracking</string>
+  <string name="start_shipment_button_text">Start transportation</string>
+  <string name="stop_shipment_button_text">Stop transportation</string>
+  <string name="create_alert_button_text">Create alert</string>
+  <string name="confirm_create_alert_button_text">Create alert</string>
+  <string name="alert_list_button_text">Alert List</string>
+  <string name="time_left_before_rest_text">Time left before next rest needed (hh:mm:ss):</string>
+  <string name="driving_time_one_day_text">Driving time past 24 hours:</string>
+  <string name="driving_time_seven_days_text">Driving time past 7 days:</string>
+  <string name="resting_time_left_text">Resting time left before new transportation can be started:</string>
+  <string name="empty_text">-</string>
+  <string name="alert_type_header_text">Alert type:</string>
+  <string name="alert_description_header_text">Description:</string>
+  <string name="alert_item_status_header_text">Status:</string>
+  <string name="alert_item_created_date_header_text">Created date:</string>
+  <string name="alert_item_type_header_text">Type:</string>
+  <string name="alert_item_severity_level_header_text">Severity level:</string>
+  <string name="alert_item_description_header_text">Description:</string>
+
+</resources>

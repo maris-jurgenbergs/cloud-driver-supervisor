@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="fabric:/FabricApplication" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+  <Parameters>
+    <Parameter Name="User.Service_InstanceCount" Value="1" />
+    <Parameter Name="Gateway.Service_InstanceCount" Value="1" />
+    <Parameter Name="Alert.Service_InstanceCount" Value="1" />
+    <Parameter Name="Transportation.Service_InstanceCount" Value="1" />
+    <Parameter Name="WebSecureCertificateThumbprint" Value="79c817a449b883825575986660ee8024f01f419d" />
+  </Parameters>
+</Application>

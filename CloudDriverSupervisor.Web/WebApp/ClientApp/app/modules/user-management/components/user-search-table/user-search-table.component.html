@@ -1,0 +1,49 @@
+﻿<div class="example-container mat-elevation-z8">
+    <div class="example-header">
+        <mat-form-field>
+            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+        </mat-form-field>
+    </div>
+
+    <div class="example-loading-shade" *ngIf="isLoadingResults">
+        <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+    </div>
+
+    <mat-table #table [dataSource]="dataSource" class="example-table"
+    matSort matSortActive="email" matSortDisableClear matSortDirection="asc">
+        <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="surname">
+            <mat-header-cell *matHeaderCellDef> Surname </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.surname}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+            <mat-header-cell *matHeaderCellDef
+            mat-sort-header
+            disableClear="true"> Email </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="roles">
+            <mat-header-cell *matHeaderCellDef> Roles </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.roles}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="customActions">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let element">
+                <button mat-raised-button class="mat-small" (click)="openRoleDialog(element.roles, element.azureId)" color="primary">Add</button>
+            </mat-cell>
+          </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+    <mat-paginator [length]="resultsLength" [pageSize]="30">
+    </mat-paginator>
+</div>

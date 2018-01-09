@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal">
+    <RelativeLayout
+        android:layout_width="0dip"
+        android:layout_weight="0.10"
+        android:layout_height="fill_parent" />
+    <RelativeLayout
+        android:layout_width="0dip"
+        android:layout_weight="0.8"
+        android:layout_height="fill_parent">
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <TextView
+                    android:text="@string/alert_type_header_text"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:id="@+id/textAlertTypeHeader" />
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinnerAlertType" />
+                <TextView
+                    android:text="@string/alert_description_header_text"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:id="@+id/descriptionTextHeader" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/descriptionTextValue"
+                    android:inputType="textMultiLine" />
+                <Button
+                    android:text="@string/confirm_create_alert_button_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:id="@+id/buttonConfirmCreateAlert" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="0dip"
+        android:layout_weight="0.10"
+        android:layout_height="fill_parent" />
+</LinearLayout>

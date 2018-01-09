@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal">
+    <RelativeLayout
+        android:layout_width="0dip"
+        android:layout_weight="0.10"
+        android:layout_height="fill_parent" />
+    <RelativeLayout
+        android:layout_width="0dip"
+        android:layout_weight="0.8"
+        android:layout_height="fill_parent">
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <Button
+                    android:id="@+id/buttonStartShipment"
+                    android:layout_height="wrap_content"
+                    android:text="@string/start_shipment_button_text"
+                    android:layout_marginTop="10dp"
+                    android:textAllCaps="false"
+                    android:layout_width="fill_parent" />
+                <Button
+                    android:id="@+id/buttonStopShipment"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stop_shipment_button_text"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="fill_parent"
+                    android:textAllCaps="false"
+                    android:enabled="false" />
+                <TextView
+                    android:text="@string/time_left_before_rest_text"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textTimeLeftBeforeRestHeader"
+                    android:textStyle="bold" />
+                <TextView
+                    android:text="@string/empty_text"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textTimeLeftBeforeRestValue" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_weight="0.5"
+                        android:layout_height="fill_parent">
+                        <TextView
+                            android:text="@string/driving_time_one_day_text"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textDrivingTimeOneDay"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_weight="0.5"
+                        android:layout_height="fill_parent">
+                        <TextView
+                            android:text="@string/driving_time_seven_days_text"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textDrivingTimeSevenDays"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_weight="0.5"
+                        android:layout_height="fill_parent">
+                        <TextView
+                            android:text="@string/empty_text"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textDrivingTimeOneDayValue" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_weight="0.5"
+                        android:layout_height="fill_parent">
+                        <TextView
+                            android:text="@string/empty_text"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textDrivingTimeSevenDaysValue" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <TextView
+                    android:text="@string/resting_time_left_text"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textRestingTimeLeftBeforeNewTransportation"
+                    android:textStyle="bold" />
+                <TextView
+                    android:text="@string/empty_text"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textRestingTimeLeftBeforeNewTransportationValue" />
+                <Button
+                    android:text="@string/create_alert_button_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:id="@+id/buttonCreateAlert"
+                    android:enabled="false" />
+                <Button
+                    android:text="@string/alert_list_button_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:id="@+id/buttonAlertList"
+                    android:enabled="false" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="0dip"
+        android:layout_weight="0.10"
+        android:layout_height="fill_parent" />
+</LinearLayout>

@@ -1,0 +1,73 @@
+<div class="example-container mat-elevation-z8">
+  <div class="example-header">
+      <mat-form-field>
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+      </mat-form-field>
+      <!-- <button id="add-user-button" mat-raised-button color="primary" (click)="onAddUserClick()">Add user</button> -->
+  </div>
+
+  <div class="example-loading-shade" *ngIf="isLoadingResults">
+      <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+      <!-- <div class="example-rate-limit-reached" *ngIf="isRateLimitReached">
+          GitHub's API rate limit has been reached. It will be reset in one minute.
+      </div> -->
+  </div>
+
+  <mat-table #table [dataSource]="dataSource" class="example-table"
+  matSort matSortActive="email" matSortDisableClear matSortDirection="asc">
+      <ng-container matColumnDef="status">
+          <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{AlertStatus[element.status]}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="created-at">
+          <mat-header-cell *matHeaderCellDef> Created at </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{formatUnixTime(element.createdAt)}} </mat-cell>
+      </ng-container>
+      
+      <ng-container matColumnDef="full-name">
+          <mat-header-cell *matHeaderCellDef> Full name </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.fullName}} </mat-cell>
+      </ng-container>
+      
+      <ng-container matColumnDef="type">
+          <mat-header-cell *matHeaderCellDef> Alert type </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{AlertType[element.type]}} </mat-cell>
+      </ng-container>
+      
+      <ng-container matColumnDef="severity-level">
+          <mat-header-cell *matHeaderCellDef> Severity level </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{SeverityLevel[element.severityLevel]}} </mat-cell>
+      </ng-container>
+
+      <!-- <ng-container matColumnDef="surname">
+          <mat-header-cell *matHeaderCellDef> Surname </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.surname}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="email">
+          <mat-header-cell *matHeaderCellDef
+          mat-sort-header
+          disableClear="true"> Email </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="roles">
+          <mat-header-cell *matHeaderCellDef> Roles </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.roles}} </mat-cell>
+      </ng-container> -->
+
+      <ng-container matColumnDef="custom-actions">
+          <mat-header-cell *matHeaderCellDef></mat-header-cell>
+          <mat-cell *matCellDef="let element">
+              <button mat-raised-button class="mat-small" (click)="openAlertDetailsDialog(element.alertId)" color="primary">Details</button>
+          </mat-cell>
+        </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+  <mat-paginator [length]="resultsLength" [pageSize]="30">
+  </mat-paginator>
+</div>
