@@ -7,6 +7,6 @@
     <Parameter Name="Transportation.Service_InstanceCount" Value="-1" />
     <Parameter Name="FrontEndPlacementConstraints" Value="(NodeTypeName==main)" />
     <Parameter Name="BackEndPlacementConstraints" Value="(NodeTypeName==service)" />
-    <Parameter Name="WebSecureCertificateThumbprint" Value="79c817a449b883825575986660ee8024f01f419d" />
+    <Parameter Name="WebSecureCertificateThumbprint" Value="f56bb83f0c9ac2f483dc566bea7ccad442cfd565" />
   </Parameters>
 </Application>

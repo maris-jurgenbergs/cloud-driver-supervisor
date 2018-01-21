@@ -7,7 +7,7 @@
     <Parameter Name="Transportation.Service_InstanceCount" DefaultValue="-1" />
     <Parameter Name="FrontEndPlacementConstraints" DefaultValue="" />
     <Parameter Name="BackEndPlacementConstraints" DefaultValue="" />
-    <Parameter Name="WebSecureCertificateThumbprint" DefaultValue="79c817a449b883825575986660ee8024f01f419d" />
+    <Parameter Name="WebSecureCertificateThumbprint" DefaultValue="f56bb83f0c9ac2f483dc566bea7ccad442cfd565" />
   </Parameters>
   <!-- Import the ServiceManifest from the ServicePackage. The ServiceManifestName and ServiceManifestVersion 
        should match the Name and Version attributes of the ServiceManifest element defined in the 
