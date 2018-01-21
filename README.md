@@ -26,3 +26,12 @@ The growth of incoming requests count was shrinking when multiple microservices 
 ![Active_message_count_growth_decrease](https://github.com/Dimarto/cloud-driver-supervisor/raw/master/docs/images/Active_message_count_growth_10_seconds.png)
 
 The average response time was **159** ms and the throughput was **477.72** requests per second.
+
+### GUI
+Web application:
+
+![Web_app](https://github.com/Dimarto/cloud-driver-supervisor/blob/master/docs/images/Web_app.JPG?raw=true)
+
+Mobile application:
+
+![Mobile_app](https://github.com/Dimarto/cloud-driver-supervisor/raw/master/docs/images/Mobile_app.png)
